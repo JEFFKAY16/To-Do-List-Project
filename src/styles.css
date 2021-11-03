@@ -135,7 +135,7 @@ header span {
 
 .items li .more-info:hover {
   color: #000;
-  cursor: all-scroll;
+  cursor: pointer;
 }
 
 .line-through {
