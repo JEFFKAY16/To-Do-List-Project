@@ -6,22 +6,22 @@ export default class List {
     } else {
       this.items = [
         {
-          description: 'Play Games At Liquid Telecoms Hackathon',
+          description: 'Play Games At Liquid Hackthon',
           completed: false,
           index: 1,
         },
         {
-          description: 'Study JavaScript At 2:45 PM',
+          description: 'Study JavaScript At 4: 45 PM',
           completed: false,
           index: 2,
         },
         {
-          description: 'Talk To Girlfriend',
+          description: 'Build Pac-Man With JavaScript',
           completed: false,
           index: 3,
         },
         {
-          description: 'High Customer Success Manager',
+          description: 'Hang Out With Girlfriend',
           completed: false,
           index: 4,
         },
