@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <title>To-Do List</title>
+</head>
+<body>
+  <main>
+    <section class="container">
+      <div class="space-around">
+        <header class="list-header">
+          <h1 class="list-title color-gray">Today's To Do</h1>
+          <span class="material-icons">sync</span>
+        </header>
+        <form id="add-todo" class="input-form">
+          <input placeholder="Add to your list..." class="add-todo-input"/>
+          <button class="icon-button refresh-button opacity-2 enter-key" type="submit">
+            <span class="material-icons">keyboard_return</span>
+          </button>
+        </form>
+        <ul class="items"></ul>
+        <footer class="list-footer">
+          <button class="clear-button opacity-5" id="clear-btn" type="button">
+            Clear all completed
+          </button>
+        </footer>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
