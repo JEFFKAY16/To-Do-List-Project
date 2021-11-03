@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+}
+
+main {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 2px 8px 0;
+  width: 500px;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+header h1 {
+  color: rgb(85, 85, 85);
+}
+
+header span {
+  color: rgb(85, 85, 85);
+  cursor: pointer;
+}
+
+.space-around {
+  padding: 5px;
+}
+
+.list-header {
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.input-form {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.list-footer {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgb(250, 250, 250);
+}
+
+.add-todo-input {
+  padding: 12px;
+  border: none;
+  outline: none;
+  position: relative;
+  width: calc(100% - 35px);
+  font-style: italic;
+}
+
+.enter-key {
+  border: none;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  opacity: 0.4;
+  margin-right: 10px;
+}
+
+.enter-key:hover {
+  opacity: 1;
+}
+
+.clear-button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: none;
+  color: rgb(173, 173, 173);
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.items li .done {
+  color: rgb(6, 127, 197);
+  display: block;
+  cursor: pointer;
+}
+
+.items li .show-default {
+  color: rgb(13, 13, 14);
+  display: block;
+  cursor: pointer;
+}
+
+.items li p {
+  width: 85%;
+  color: rgb(85, 85, 85);
+  outline: none;
+  border: none;
+}
+
+.items li .more-info {
+  color: rgb(85, 85, 85);
+}
+
+.items li .more-info:hover {
+  color: #000;
+  cursor: all-scroll;
+}
