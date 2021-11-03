@@ -137,3 +137,15 @@ header span {
   color: #000;
   cursor: all-scroll;
 }
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.material-icons {
+  color: rgb(85, 85, 85);
+}
+
+.update-status.done {
+  color: dodgerblue !important;
+}
