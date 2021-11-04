@@ -4,28 +4,7 @@ export default class List {
     if (currentData) {
       this.items = currentData;
     } else {
-      this.items = [
-        {
-          description: 'Play Games At Liquid Hackthon',
-          completed: false,
-          index: 1,
-        },
-        {
-          description: 'Study JavaScript At 4: 45 PM',
-          completed: false,
-          index: 2,
-        },
-        {
-          description: 'Build Pac-Man With JavaScript',
-          completed: false,
-          index: 3,
-        },
-        {
-          description: 'Hang Out With Girlfriend',
-          completed: false,
-          index: 4,
-        },
-      ];
+      this.items = [];
     }
   }
 
@@ -46,7 +25,7 @@ export default class List {
       <p  class="activity" data-id="${task.index}" contenteditable="true">${task.description}</p>`;
       }
       listItem += `
-    <span class="material-icons more-info">more_vert</span>
+    <span class="material-icons more-info delete-item" data-id="${task.index}">delete</span>
     </li>`;
       listSection.innerHTML += listItem;
     });
@@ -79,7 +58,33 @@ export default class List {
     localStorage.setItem('todo-list', JSON.stringify(this.items));
   }
 
+  addItem(name) {
+    this.items.push({
+      description: name,
+      completed: false,
+      index: this.items.length,
+    });
+    this.displayItems();
+  }
+
+  editItem(task, index) {
+    this.items[index - 1].description = task;
+    this.saveItems();
+  }
+
+  clearCompleted() {
+    const unclearedItems = this.items.filter((item) => item.completed === false);
+    this.items = unclearedItems;
+    this.displayItems();
+  }
+
+  removeItem(index) {
+    this.items.splice(index - 1, 1);
+    this.displayItems();
+  }
+
   attachEvents() {
+    // update item status
     const tasks = document.querySelectorAll('.update-status');
     tasks.forEach((task) => {
       task.addEventListener('click', (e) => {
@@ -95,6 +100,23 @@ export default class List {
           e.target.classList.add('done');
         }
         this.displayItems();
+      });
+    });
+    // delete Item
+    const allItems = document.querySelectorAll('.delete-item');
+    allItems.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        const index = e.target.getAttribute('data-id');
+        this.removeItem(index);
+      });
+    });
+    // edit items
+    const activities = document.querySelectorAll('.activity');
+    activities.forEach((activity) => {
+      activity.addEventListener('input', (e) => {
+        const index = e.target.getAttribute('data-id');
+        const newValue = e.target.innerText;
+        this.editItem(newValue, index);
       });
     });
   }
