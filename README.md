@@ -5,7 +5,7 @@
 > An advanced Todo List web application built with pure JS, HTML & CSS
 
 ## Live link
-[To be deployed once the whole project is complete]()
+[Try It Live](https://vigilant-mccarthy-e60849.netlify.app/)
 
 Additional description about the project and its features.
 
